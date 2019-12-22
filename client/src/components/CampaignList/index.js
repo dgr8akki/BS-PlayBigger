@@ -27,7 +27,7 @@ class CampaignList extends Component {
         title: 'Campaign',
         dataIndex: 'name',
         key: 'name',
-        width: 130,
+        width: 160,
         render: (text, row) => <CampaignCard name={text} icon={row.imageUrl} region={row.region} />,
       },
       {
@@ -40,7 +40,7 @@ class CampaignList extends Component {
       {
         title: 'Actions',
         key: 'action',
-        width: 180,
+        width: 100,
         render: (text, row) => (
           <ActionList
             csvUrl={row.csv}

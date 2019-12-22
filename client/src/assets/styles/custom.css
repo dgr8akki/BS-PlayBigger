@@ -5,7 +5,7 @@
   font-size: 18px;
   line-height: 28px;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 0 6px auto !important;
 }
 
 .ant-tabs-tab:hover,
@@ -17,6 +17,7 @@
 .ant-tabs-tab-active.ant-tabs-tab {
   color: #83A515 !important;
   font-weight: 400;
+  margin: 0 0 6px auto !important;
 }
 
 .ant-tabs-ink-bar.ant-tabs-ink-bar-no-animated {
