@@ -1,0 +1,22 @@
+@import '../../assets/styles/styles';
+
+.heading {
+  color: $heading-blue;
+  font-family: $Roboto;
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.date {
+  color: $heading-blue;
+  font-family: $Roboto;
+  font-size: 16px;
+}
+
+.time {
+  color: $light-grey;
+  font-family: $Roboto;
+  font-size: 14px;
+  font-style: italic;
+}

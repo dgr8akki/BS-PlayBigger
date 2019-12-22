@@ -1,0 +1,33 @@
+@import "base/base";
+@import "base/variables";
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width:  576px) {
+    width: 540px;
+  }
+
+  @media (min-width:  768px) {
+    width: 720px;
+  }
+  @media (min-width:  992px ) {
+    width: 960px;
+  }
+  @media (min-width: 1200px) {
+    width: 1080px;
+  }
+
+  @include breakpoint(desktop) {
+    min-height: calc(100vh - 295px);
+  }
+
+  @include breakpoint(mobile) {
+    margin: 0 auto;
+  }
+}
+
+body {
+  font-family: $Roboto;
+}

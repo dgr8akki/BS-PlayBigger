@@ -1,0 +1,15 @@
+@import '../../assets/styles/styles';
+
+.actionTitle {
+  color: $light-grey;
+  font-size: 14px;
+  margin-left: 7px;
+}
+
+.actionWrapper {
+  cursor: pointer;
+}
+
+.actionListWrapper {
+  display: flex;
+}

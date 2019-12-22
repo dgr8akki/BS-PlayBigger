@@ -1,0 +1,53 @@
+@import '../../assets/styles/styles';
+
+.header {
+  height: 80px !important;
+  width: 100%;
+  background: $header-bg;
+  padding: 10px;
+}
+
+.bsTitle {
+  color: $body-bg;
+  font-family: $SFNS;
+  font-size: 16px;
+  margin: 0;
+  float: left;
+}
+
+.bsDesc {
+  color: $desc;
+  font-family: $SFNS;
+  font-size: 12px;
+  margin: -6px 0 0 0;
+  float: left;
+}
+
+.titleDesc {
+  display: grid !important;
+  padding-top: 10px;
+
+  @include breakpoint(mobile) {
+    padding-top: 2px;
+  }
+}
+
+.logoContainer {
+  display: flex !important;
+  height: 64px;
+  align-items: center;
+}
+
+.logoWrapper {
+  width: 70px;
+}
+
+.logo {
+  height: 52px;
+  width: 52px;
+
+  @include breakpoint(mobile-tablet) {
+    height: 38px;
+    width: 38px;
+  }
+}

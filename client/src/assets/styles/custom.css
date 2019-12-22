@@ -1,0 +1,48 @@
+.ant-tabs-tab {
+  height: 28px;
+  width: 178px;
+  color: #556789;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.ant-tabs-tab:hover,
+.ant-tabs-tab:active,
+.ant-tabs-tab:focus {
+  color: #83A515 !important;
+}
+
+.ant-tabs-tab-active.ant-tabs-tab {
+  color: #83A515 !important;
+  font-weight: 500;
+}
+
+.ant-tabs-ink-bar.ant-tabs-ink-bar-no-animated {
+  height: 4px;
+  width: 209px !important;
+  background-color: #83A515;
+}
+
+.ant-table-column-title {
+  height: 24px;
+  width: 40px;
+  color: #556789;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: Uppercase;
+}
+
+body {
+  font-family: 'Roboto';
+}
+
+table {
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1) !important;
+}
+
+th {
+  background-color: #F1F1F4 !important;
+}
