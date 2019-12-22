@@ -10,4 +10,14 @@
 
 .row {
   height: 92px;
+
+  @include breakpoint(mobile) {
+    height: 48px;
+  }
+
+  td {
+    @include breakpoint(mobile) {
+      padding: 0 !important;
+    }
+  }
 }

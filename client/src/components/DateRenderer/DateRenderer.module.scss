@@ -12,6 +12,14 @@
   color: $heading-blue;
   font-family: $Roboto;
   font-size: 16px;
+
+  @include breakpoint(mobile) {
+    font-size: 10px;
+    padding: 0 0 0 10px;
+  }
+  @include breakpoint(tablet) {
+    font-size: 14px;
+  }
 }
 
 .time {
@@ -19,4 +27,12 @@
   font-family: $Roboto;
   font-size: 14px;
   font-style: italic;
+
+  @include breakpoint(mobile) {
+    font-size: 10px;
+    padding: 0 0 0 10px;
+  }
+  @include breakpoint(tablet) {
+    font-size: 14px;
+  }
 }

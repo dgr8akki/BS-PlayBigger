@@ -8,6 +8,19 @@
   margin: 0 0 6px auto !important;
 }
 
+@media only screen and (max-width: 767px) {
+  .ant-tabs-tab {
+    font-size: 12px;
+    padding: 0 2px !important;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .ant-tabs-tab {
+    width: 33%;
+  }
+}
+
 .ant-tabs-tab:hover,
 .ant-tabs-tab:active,
 .ant-tabs-tab:focus {
@@ -20,10 +33,24 @@
   margin: 0 0 6px auto !important;
 }
 
+.ant-tabs-nav-container-scrolling {
+  padding: 0 !important
+}
+
+.ant-tabs-tab-arrow-show {
+  display: none
+}
+
 .ant-tabs-ink-bar.ant-tabs-ink-bar-no-animated {
   height: 4px;
-  width: 209px !important;
+  width: 33% !important;
   background-color: #83A515;
+}
+
+@media only screen and (max-width: 768px) {
+  .ant-tabs-nav.ant-tabs-nav-animated {
+    width: 100%;
+  }
 }
 
 .ant-tabs-bar {
@@ -44,6 +71,14 @@
   text-transform: Uppercase;
 }
 
+@media only screen and (max-width: 767px) {
+  .ant-table-column-title {
+    font-size: 8px !important;
+    padding: 0 0 0 8px !important;
+  }
+}
+
+
 body {
   font-family: 'Roboto';
 }
@@ -54,7 +89,26 @@ table {
   margin: 20px auto;
 }
 
+@media only screen and (max-width: 767px) {
+  table {
+    margin: 6px auto;
+  }
+}
+
 th {
   background-color: #F1F1F4 !important;
   border-radius: 0 !important;
+}
+
+@media only screen and (max-width: 767px) {
+  th {
+    font-size: 8px !important;
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  td {
+    padding: 0 !important;
+  }
 }

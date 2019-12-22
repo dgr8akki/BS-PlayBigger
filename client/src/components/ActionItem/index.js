@@ -6,7 +6,7 @@ const ActionItem = ({
 }) => (
   <div className={`${className} ${styles.actionWrapper}`} onClick={onClick}>
     <img src={icon} alt="actionItem" className={styles.actionIcon} width={width} height={height} />
-    <span className={styles.actionTitle}>
+    <span className={styles.imageUrl}>
       {
         title
       }

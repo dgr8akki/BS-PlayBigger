@@ -3,18 +3,19 @@ import { Link } from 'react-router-dom';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import styles from './CampaignCard.module.scss';
+import {truncate} from "../../utils";
 
 const CampaignCard = ({
   className, name, icon, region,
 }) => (
   <Row className={`${className || null}`}>
-    <Col span={4}>
-      <img src={icon} alt="logo" height={40} width={40} />
+    <Col lg={4} sm={4} md={6}>
+      <img src={icon} alt="logo" className={styles.logo} />
     </Col>
-    <Col span={20} className={styles.titleDesc}>
+    <Col lg={20} sm={17} md={18} className={styles.titleDesc}>
       <span className={styles.bsTitle}>
         {
-          name
+          truncate(name, 12)
         }
       </span>
       <span className={styles.bsDesc}>
