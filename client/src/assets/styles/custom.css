@@ -26,6 +26,14 @@
   background-color: #83A515;
 }
 
+.ant-tabs-bar {
+  border-bottom: 1px solid #F1F1F4;
+}
+
+.ant-modal-content {
+  border-radius: 0;
+}
+
 .ant-table-column-title {
   height: 24px;
   width: 40px;
