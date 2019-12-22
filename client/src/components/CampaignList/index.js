@@ -20,23 +20,27 @@ class CampaignList extends Component {
         title: 'Date',
         dataIndex: 'createdOn',
         key: 'date',
+        width: 100,
         render: (text) => <DateRenderer unixTimestamp={text} />,
       },
       {
         title: 'Campaign',
         dataIndex: 'name',
         key: 'name',
+        width: 130,
         render: (text, row) => <CampaignCard name={text} icon={row.imageUrl} region={row.region} />,
       },
       {
         title: 'View',
         dataIndex: 'price',
         key: 'price',
+        width: 100,
         render: (text, row) => <PricingModal data={row} />,
       },
       {
         title: 'Actions',
         key: 'action',
+        width: 180,
         render: (text, row) => (
           <ActionList
             csvUrl={row.csv}
