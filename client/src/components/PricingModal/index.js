@@ -46,7 +46,7 @@ class PricingModal extends Component {
               <Col span={10}>
                 <img src={imageUrl} alt="card" height={137} width={137} />
               </Col>
-              <Col className={styles.titleDesc}>
+              <Col className={styles.titleDesc} span={14}>
                 <span className={styles.bsTitle}>
                   {
                     name
@@ -61,39 +61,39 @@ class PricingModal extends Component {
             </Row>
             <Row className={styles.pricingWrapper}>
               <h3 className={styles.pricingHeading}>Pricing</h3>
-              <Col>
-                <Row>
-                  <Col span={12} className={styles.priceTitle}>
-                    1 Week - 1 Month
-                  </Col>
-                  <Col span={12} className={styles.priceValue}>
-                    {
-                      `$ ${Math.floor(price / 12) + 15}`
-                    }
-                  </Col>
-                </Row>
-                <Row>
-                  <Col span={12} className={styles.priceTitle}>
-                    6 Months
-                  </Col>
-                  <Col span={12} className={styles.priceValue}>
-                    {
-                      `$ ${Math.floor(price / 2) + 12}`
-                    }
-                  </Col>
-                </Row>
-                <Row>
-                  <Col span={12} className={styles.priceTitle}>
-                    1 Year
-                  </Col>
-                  <Col span={12} className={styles.priceValue}>
-                    {
-                      `$ ${Math.floor(price)}`
-                    }
-                  </Col>
-                </Row>
-              </Col>
             </Row>
+            <div className={styles.pricingWrapper}>
+              <Row>
+                <Col span={12} className={styles.priceTitle}>
+                  1 Week - 1 Month
+                </Col>
+                <Col span={12} className={styles.priceValue}>
+                  {
+                    `$ ${Math.floor(price / 12) + 15}`
+                  }
+                </Col>
+              </Row>
+              <Row>
+                <Col span={12} className={styles.priceTitle}>
+                  6 Months
+                </Col>
+                <Col span={12} className={styles.priceValue}>
+                  {
+                    `$ ${Math.floor(price / 2) + 12}`
+                  }
+                </Col>
+              </Row>
+              <Row>
+                <Col span={12} className={styles.priceTitle}>
+                  1 Year
+                </Col>
+                <Col span={12} className={styles.priceValue}>
+                  {
+                    `$ ${Math.floor(price)}`
+                  }
+                </Col>
+              </Row>
+            </div>
             <Button
               onClick={() => this.setVisibility(false)}
               className={styles.closeButton}

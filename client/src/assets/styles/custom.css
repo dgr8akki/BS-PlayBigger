@@ -5,7 +5,7 @@
   font-size: 18px;
   line-height: 28px;
   text-align: center;
-  margin: 0 0 6px auto !important;
+  margin-bottom: 8px !important;
 }
 
 @media only screen and (max-width: 767px) {
@@ -29,8 +29,7 @@
 
 .ant-tabs-tab-active.ant-tabs-tab {
   color: #83A515 !important;
-  font-weight: 400;
-  margin: 0 0 6px auto !important;
+  margin-bottom: 8px !important;
 }
 
 .ant-tabs-nav-container-scrolling {
@@ -121,4 +120,8 @@ th {
   td {
     padding: 0 !important;
   }
+}
+
+.ant-tabs-tab-btn {
+  margin: 0 auto;
 }

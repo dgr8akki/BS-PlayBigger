@@ -26,6 +26,10 @@ class CustomTabs extends Component {
         defaultActiveKey="upcoming"
         onChange={getData}
         animated={false}
+        tabBarGutter={24}
+        tabBarStyle={{
+          fontWeight: 500
+        }}
       >
         <TabPane tab="Upcoming Campaigns" key="upcoming">
           <CampaignList data={up_list} loading={loading} />

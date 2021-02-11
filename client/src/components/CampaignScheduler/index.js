@@ -16,9 +16,12 @@ class CampaignScheduler extends Component {
     super(props);
     this.state = {
       visibility: false,
+      actualDate: this.props.data.createdOn,
+      updatedDate: this.props.data.createdOn
     };
     this.setVisibility = this.setVisibility.bind(this);
     this.onChange = this.onChange.bind(this);
+    this.handleOk = this.handleOk.bind(this);
   }
 
   setVisibility(visibility) {
@@ -26,22 +29,23 @@ class CampaignScheduler extends Component {
   }
 
   onChange(value) {
+    this.setState({
+      updatedDate: moment(value).format('X')
+    });
+  }
+
+  handleOk() {
     const { data, updateData, campaigns } = this.props;
     const { key } = campaigns;
     const { alias } = data;
-    this.setState({
-      visibility: false,
-    });
-
-    updateData(alias, moment(value).format('X'), key);
+    const {updatedDate, actualDate} = this.state;
+    if (updatedDate && updatedDate != actualDate)
+      updateData(alias, updatedDate, key);
+    this.setVisibility(false);
   }
 
   render() {
-    const { visibility } = this.state;
-    const { data } = this.props;
-    const {
-      createdOn,
-    } = data;
+    const { visibility, updatedDate } = this.state;
     return (
       <>
         <ActionItem
@@ -55,17 +59,17 @@ class CampaignScheduler extends Component {
         <Modal
           centered
           visible={visibility}
-          footer={null}
           closable={false}
           width={400}
           onCancel={() => this.setVisibility(false)}
+          onOk={this.handleOk}
         >
           <div className={styles.modalContainer}>
             <h3 className={styles.pricingHeading}>Select new date:</h3>
             <Calendar
               onChange={this.onChange}
               fullscreen={false}
-              defaultValue={moment(createdOn * 1000)}
+              defaultValue={moment(updatedDate * 1000)}
             />
           </div>
         </Modal>
