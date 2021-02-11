@@ -2,9 +2,11 @@ import moment from 'moment';
 import axios from '../axios';
 import * as actionType from './actionTypes';
 
-export const setData = (payload) => ({ type: actionType.SET_DATA, payload });
 export const setLoading = (payload) => ({ type: actionType.SET_LOADING, payload });
 export const setKey = (payload) => ({ type: actionType.SET_KEY, payload });
+export const setUpcomingData = (payload) => ({ type: actionType.SET_UPCOMING_DATA, payload });
+export const setLiveData = (payload) => ({ type: actionType.SET_LIVE_DATA, payload });
+export const setPastData = (payload) => ({ type: actionType.SET_PAST_DATA, payload });
 
 export const getData = (key) => async (dispatch) => {
   dispatch(setLoading(true));
@@ -14,13 +16,27 @@ export const getData = (key) => async (dispatch) => {
 
     const results = res.data;
     if (Number(results.data.length) > 0) {
-      dispatch(setData(results.data));
+      dispatch(setData(results.data, key));
     }
     return dispatch(setLoading(false));
   } catch (error) {
     dispatch(setLoading(false));
   }
 };
+
+export const setData = (payload, key) => async (dispatch) => {
+switch (key) {
+    case 'upcoming':
+      dispatch(setUpcomingData(payload));
+      break;
+    case 'past':
+      dispatch(setPastData(payload))
+      break;
+    case 'live':
+      dispatch(setLiveData(payload));
+      break;
+  }
+}
 
 export const updateData = (alias, createdOn, key) => async (dispatch) => {
   dispatch(setLoading(true));

@@ -20,7 +20,7 @@ class CustomTabs extends Component {
 
   render() {
     const { getData, campaigns } = this.props;
-    const { list, loading } = campaigns;
+    const { live_list, past_list, up_list, loading } = campaigns;
     return (
       <Tabs
         defaultActiveKey="upcoming"
@@ -28,13 +28,13 @@ class CustomTabs extends Component {
         animated={false}
       >
         <TabPane tab="Upcoming Campaigns" key="upcoming">
-          <CampaignList data={list} loading={loading} />
+          <CampaignList data={up_list} loading={loading} />
         </TabPane>
         <TabPane tab="Live Campaigns" key="live">
-          <CampaignList data={list} loading={loading} />
+          <CampaignList data={live_list} loading={loading} />
         </TabPane>
         <TabPane tab="Past Campaigns" key="past">
-          <CampaignList data={list} loading={loading} />
+          <CampaignList data={past_list} loading={loading} />
         </TabPane>
       </Tabs>
     );
