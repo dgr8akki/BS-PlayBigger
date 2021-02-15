@@ -11,7 +11,8 @@
         "server": "nodemon index.js",
         "eslint": "eslint --debug ./",
         "eslint:fix": "eslint --fix ./",
-        "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+        "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+        "test": ""
     },
     "author": "Aakash Pahuja",
     "dependencies": {

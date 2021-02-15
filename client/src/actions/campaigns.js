@@ -15,9 +15,7 @@ export const getData = (key) => async (dispatch) => {
     const res = await axios.get(`/api/list/campaign/${key}`);
 
     const results = res.data;
-    if (Number(results.data.length) > 0) {
-      dispatch(setData(results.data, key));
-    }
+    dispatch(setData(results.data, key));
     return dispatch(setLoading(false));
   } catch (error) {
     dispatch(setLoading(false));
@@ -25,6 +23,7 @@ export const getData = (key) => async (dispatch) => {
 };
 
 export const setData = (payload, key) => async (dispatch) => {
+  console.log("SETTING DATA: " , key, payload);
 switch (key) {
     case 'upcoming':
       dispatch(setUpcomingData(payload));

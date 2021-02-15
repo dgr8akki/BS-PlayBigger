@@ -1,4 +1,4 @@
-const Loki = require('lokijs');
+const loki = require('lokijs');
 const bodyParser = require('body-parser');
 const Lfsa = require('lokijs/src/loki-fs-structured-adapter');
 const moment = require('moment');
@@ -6,7 +6,7 @@ const moment = require('moment');
 const adapter = new Lfsa();
 let campaigns = null;
 
-const db = new Loki('bluestacks.db', {
+const db = new loki('bluestacks.db', {
   adapter,
   autoload: true,
   // eslint-disable-next-line no-use-before-define
@@ -31,7 +31,7 @@ const APIRouter = (app) => {
   app.get('/api/test', (req, res) => {
     res
       .status(200)
-      .send({ message: 'API testing successfull' });
+      .send({ message: 'API testing successful' });
   });
 
   app.delete('/api/remove/:alias', (request, response) => {
