@@ -44,8 +44,8 @@ class PricingModal extends Component {
         >
           <div className={styles.modalContainer}>
             <Row>
-              <Col span={10}>
-                <img src={imageUrl} alt="card" height={137} width={137} />
+              <Col span={10} className={styles.imageWrapper}>
+                <img className={styles.image} src={imageUrl} alt="card" />
               </Col>
               <Col className={styles.titleDesc} span={14}>
                 <span className={styles.bsTitle}>

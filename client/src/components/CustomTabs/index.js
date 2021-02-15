@@ -43,7 +43,6 @@ class CustomTabs extends Component {
   }
 }
 
-
 const mapStateToProps = ({ campaigns }) => ({ campaigns });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({ ...campaignsActions }, dispatch);

@@ -11,13 +11,14 @@ const CampaignCard = ({
             <Col lg={4} sm={4} md={6}>
                 <img src={icon} alt="logo" className={styles.logo} />
             </Col>
-            <Col lg={20} sm={17} md={18} className={styles.titleDesc}>
+            <Col span={1}/>
+            <Col lg={19} sm={19} md={17} className={styles.titleDesc}>
                   <span className={styles.bsTitle}>
                     {
                         truncate(name, 12)
                     }
                   </span>
-                            <span className={styles.bsDesc}>
+                  <span className={styles.bsDesc}>
                     {
                         region
                     }

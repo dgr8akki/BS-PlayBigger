@@ -8,13 +8,40 @@
   margin-top: 20px;
 }
 
-.modalContainer {
+.imageWrapper {
+  @include breakpoint(mobile) {
+    text-align: left;
+  }
+}
 
+.image {
+  height: 137px;
+  width: 137px;
+
+  @include breakpoint(mobile) {
+    height: 100px;
+    width: 100px;
+  }
+  @include breakpoint(tablet) {
+    height: 110px;
+    width: 110px;
+  }
+}
+
+.modalContainer {
   .titleDesc {
     display: grid;
     padding-left: 10px;
     position: relative;
     height: 137px;
+
+    @include breakpoint(mobile) {
+      height: 101px;
+      padding-left: 0;
+    }
+    @include breakpoint(tablet) {
+      height: 110px;
+    }
   }
 
   .bsTitle {
