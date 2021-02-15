@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Divider, Tag } from 'antd';
+import Table from 'antd/lib/table';
 import styles from './CampaignList.module.scss';
 import DateRenderer from '../DateRenderer';
 import CampaignCard from '../CampaignCard';
@@ -61,6 +61,7 @@ class CampaignList extends Component {
         dataSource={data}
         rowClassName={styles.row}
         loading={loading}
+        rowKey={(row) => row.alias}
       />
     );
   }

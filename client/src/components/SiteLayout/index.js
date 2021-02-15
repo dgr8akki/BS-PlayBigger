@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from '../../axios';
 import styles from './SiteLayout.module.scss';
 import SiteHeader from '../SiteHeader';
 

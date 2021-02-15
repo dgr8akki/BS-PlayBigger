@@ -19,6 +19,7 @@ export const truncate = (string, length) => {
  *  Convert Unix time to formatted date.
  * @private
  * @param {number} unixTimestamp - The time in unix format
+ * @param {number} format - The required format
  * @returns {string} Returns formatted date.
  */
 
@@ -43,18 +44,18 @@ export const unixToDaysLeft = (unixTimestamp) => {
 /**
  *  Get formatted days conditions (left, ahead, yesterday, today, tomorrow).
  * @private
- * @param {number} daysLeft - The number of days left.
+ * @param {number} unixTimestamp - Event timeStamp.
  * @returns {string} Returns formatted days left.
  */
 
 export const daysLeft = (unixTimestamp) => {
   const eventDate = moment.unix(unixTimestamp);
   const todayDayStart = moment().startOf('day');
-  const todayDayEnd = moment().endOf('day').subtract(1, 'second');
-  const yesterdayStart = moment().startOf('day').subtract(1, 'day');
-  const yesterdayEnd = moment().endOf('day').subtract(1, 'day').subtract(1, 'second');
-  const tomorrowStart = moment().startOf('day').add(1, 'day');
-  const tomorrowEnd = moment().endOf('day').add(1, 'day').subtract(1, 'second');
+  const todayDayEnd = moment().endOf('day');
+  const yesterdayStart = moment().subtract(1, 'day').startOf('day');
+  const yesterdayEnd = moment().subtract(1, 'day').endOf('day');
+  const tomorrowStart = moment().add(1, 'day').startOf('day');
+  const tomorrowEnd = moment().add(1, 'day').endOf('day');
 
   if (eventDate.diff(todayDayStart, 'second') >= 0
     && eventDate.diff(todayDayEnd, 'second') < 0) return 'Today';

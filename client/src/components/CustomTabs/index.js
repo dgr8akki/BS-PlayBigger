@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import Tabs from 'antd/lib/tabs';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import axios from '../../axios';
 import CampaignList from '../CampaignList';
 import campaignsActions from '../../actions';
-
 
 const { TabPane } = Tabs;
 

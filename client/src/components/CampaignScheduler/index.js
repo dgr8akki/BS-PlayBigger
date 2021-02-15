@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import {
-  Modal, Calendar,
-} from 'antd';
+import Modal from 'antd/lib/modal';
+import Calendar from 'antd/lib/calendar';
 import moment from 'moment';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import styles from './CampaignScheduler.module.scss';
 import ActionItem from '../ActionItem';
-import axios from '../../axios';
 import calenderIcon from '../../assets/img/calendar.png';
 import campaignsActions from '../../actions';
 

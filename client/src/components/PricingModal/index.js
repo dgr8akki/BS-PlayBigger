@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {
-  Modal, Button, Row, Col,
-} from 'antd';
+import Modal from 'antd/lib/modal';
+import Button from 'antd/lib/button';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
 import styles from './PricingModal.module.scss';
 import priceIcon from '../../assets/img/price-icon.png';
 import ActionItem from '../ActionItem';
